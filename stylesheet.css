@@ -247,15 +247,14 @@ header nav:active{
     color: var(--red-color);
 }
 .text{
-    font-size: 1.6rem;
     text-align: left;
     margin-right: 11rem;
     margin-left: 9rem;
     margin-top: 9rem;
     margin-bottom: 15rem;
     line-height: 3.8rem;
+    font-size: 1.6rem;
 }
-
 
 /* section 3 */
 
@@ -302,7 +301,7 @@ header nav:active{
 .left-line,
 .right-line {
   height: 150px; 
-  width: 8px;
+  width: 6px;
   background-color: var(--text-color);
   border-radius: 5px; 
   margin-right: 20px; 
@@ -311,7 +310,7 @@ header nav:active{
 .left-line{
   margin-right: 20px; 
   height: 150px; 
-  width: 8px;
+  width: 6px;
   background-color: var(--text-color);
   border-radius: 5px;
 }
@@ -325,17 +324,17 @@ header nav:active{
 
 
 .section4ID{
-  height: 240vh;
   background-color: var(--text-color);
   width: 100%;
   padding: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 170px;
 }
 .section4Header{
   text-align: center;
-  padding-bottom: 1025px;
+  padding-bottom: 25px;
   padding-top: 0px;
 }
 .section4Header p{
@@ -353,43 +352,6 @@ header nav:active{
   font-size: 50px;
   color: var(--red-color);
 }
-.Section4Line{
-  height: 1000px; 
-  width: 2px;
-  background-color: var(--red-color);
-  border-radius: 5px; 
-  position: absolute;
-  bottom: 165px;
-
-}
-.point1{
-  height: 12px; 
-  width: 2px;
-  background-color: var(--red-color);
-  border-radius: 5px; 
-  position: absolute;
-  bottom: 140px;
-}
-.point2{
-  height: 12px; 
-  width: 2px;
-  background-color: var(--red-color);
-  border-radius: 5px; 
-  position: absolute;
-  bottom: 1180px;
-}
-.imgWrapper1{
-  width: 20px;
-    
-}
-.wrapper1{
-  
-  height: 100%;
-  object-fit: cover;
-  object-position: 0px -14px;
-    height: 101vh;
-    width: -webkit-fill-available;
-}
 
 
 /* Section 5 */
@@ -398,7 +360,7 @@ header nav:active{
 /* Section Loading */
 
 
-#loading {
+/*#loading {
   height: 100vh;
   width: 100vw;
   z-index: 100;
@@ -412,7 +374,7 @@ header nav:active{
   display: flex;
 
 }
-
+*/
 /* Background Gradient CSS */
 
   
@@ -590,3 +552,188 @@ header nav:active{
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+ 
+  .timeline {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+    position: relative;
+    /*background-color: var(--text-color);*/
+  }
+ 
+  .timeline__content-title {
+   /* font-weight: normal;
+    font-size: 76px;
+    margin: -10px 0 0 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #fff;*/
+  }
+  .timeline__content-desc {
+    margin: 0;
+    font-size: 25px;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: normal;
+    line-height: 3.8rem;
+    font-size: 1.6rem;
+    padding-top: 45px;
+  }
+  .timeline:before {
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    margin-left: -1px;
+    content: "";
+    background: var(--red-color);
+  }
+  @media only screen and (max-width: 767px) {
+    .timeline:before {
+      left: 40px;
+    }
+  }
+  .timeline-item {
+    padding: 40px 0;
+    opacity: 0.3;
+    filter: blur(2px);
+    transition: 0.3s;
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    display: flex;
+    position: relative;
+    transform: translateY(-80px);
+    margin-left: -112px;
+  }
+  .timeline-item:before {
+    content: attr(data-text);
+   /* letter-spacing: 3px;*/
+    width: 100%;
+    position: absolute;
+    color: var(--red-color);
+    font-size: 23px;
+    font-family: "Poppins", sans-serif;
+    border-left: 3px solid var(--text-color);
+    top: 70%;
+    margin-top: -5px;
+    padding-left: 57px;
+    opacity: 0;
+    right: calc(-100% - 112px);
+    border-radius: 3px;
+    margin-left: 657px;
+  }
+  .timeline-item:nth-child(even) {
+    align-self: flex-end;
+    margin-right: -70px;
+  }
+  .timeline-item:nth-child(even):before {
+    right: auto;
+    /*text-align: right;*/
+    left: calc(-100% - 768px);
+    padding-left: 0;
+    border-left: none;
+    border-right: 3px solid var(--text-color);
+   
+  }
+  .timeline-item--active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    margin-left: -90px
+  }
+  .timeline-item--active:before {
+    top: 50%;
+    transition: 0.3s all 0.2s;
+    opacity: 1;
+    margin-right: -77px;
+  }
+  .timeline-item--active .timeline__content-title {
+    margin: -50px 0 20px 0;
+  }
+  @media only screen and (max-width: 767px) {
+    .timeline-item {
+      align-self: baseline !important;
+      width: 100%;
+      padding: 0 30px 150px 80px;
+    }
+    .timeline-item:before {
+      left: 10px !important;
+      padding: 0 !important;
+      top: 50px;
+      text-align: center !important;
+      width: 60px;
+      border: none !important;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 40px;
+    }
+  }
+  .timeline__img {
+    max-width: 115%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+  }
+  .timeline-container {
+    width: 100%;
+    position: relative;
+    padding: 0px 0;
+    transition: 0.3s ease 0s;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: var(--text-color);
+  }
+  .timeline-container:before {
+    /*position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 99, 99, 0.8);
+    content: "";*/
+  }
+  .timeline-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .timeline-header__title {
+    color: #fff;
+    font-size: 46px;
+    font-family: Cardo;
+    font-weight: normal;
+    margin: 0;
+  }
+  .timeline-header__subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+  }
+  
+  .demo-footer {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .demo-footer a {
+    color: #999;
+    display: inline-block;
+    font-family: Cardo;
+  }
