@@ -80,7 +80,7 @@ console.log("Hello from script.js!");
     },
     {
       element: document.getElementById('nava1'),
-      englishHTML: 'Hoger',
+      englishHTML: 'Inicio',
       spanishHTML: 'Home'
     },
     {
@@ -210,7 +210,7 @@ window.onload = function() {
               ")"
           );
           selectors.item.last().addClass(selectors.activeClass);
-        } else if (pos <= max - 40 && pos >= min) {
+        } else if (pos <= max - 15 && pos >= min) {
           selectors.id.css(
             "background-image",
             "url(" +
@@ -228,3 +228,23 @@ window.onload = function() {
 })(jQuery);
 
 $("#timeline-1").timeline();
+
+
+// Scroll on animation JS
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+       console.log(entry)
+       if (entry.isIntersecting) {
+           entry.target.classList.add('show');
+       } else {
+           entry.target.classList.remove('show');
+       }
+  });
+});
+
+
+const hiddenElements = document.querySelectorAll('.hidethem');
+hiddenElements.forEach((el) => observer.observe(el));
+
