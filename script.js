@@ -1,22 +1,22 @@
 console.log("Hello from script.js!");
 
-//let LastScrollTop = 0;
-//const header = 
-//document.getElementById('header');
+/*let LastScrollTop = 0;
+const header = 
+document.getElementById('header');
 
-//window.addEventListener('scroll', () => {
-  //  const currentScroll = window.scrollY
-    // || document.documentElement.scrollTop;
-//
-  //   if (currentScroll > LastScrollTop) {
-    //    header.classList.add('hidden');
-     //} else {
-       // header.classList.remove('hidden');
-     //}
+window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY
+    || document.documentElement.scrollTop;
 
-     //LastScrollTop = currentScroll;
-   //});
+  if (currentScroll > LastScrollTop) {
+        header.classList.add('Header');
+     } else {
+        header.classList.remove('Header');
+     }
 
+     LastScrollTop = currentScroll;
+   });
+*/
 
 /* background */
 
@@ -43,8 +43,8 @@ console.log("Hello from script.js!");
    //  move();
 
 
-/*
-   document.addEventListener("DOMContentLoaded", function() {
+
+ /*  document.addEventListener("DOMContentLoaded", function() {
       // Get all the <a> elements in the navigation
       const navLinks = document.querySelectorAll("nav a");
   
@@ -70,8 +70,8 @@ console.log("Hello from script.js!");
               }
           });
       });
-  });
-  */
+  });*/
+  
   const textValues = [
     {
       element: document.getElementById('section1h1'),
@@ -198,7 +198,7 @@ window.onload = function() {
         min = $(this).offset().top;
         max = $(this).height() + $(this).offset().top;
         var that = $(this);
-        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+        if (i == itemLength - 2 && pos > min + $(this).height() / 20) {
           selectors.item.removeClass(selectors.activeClass);
           selectors.id.css(
             "background-image",
@@ -210,7 +210,7 @@ window.onload = function() {
               ")"
           );
           selectors.item.last().addClass(selectors.activeClass);
-        } else if (pos <= max - 15 && pos >= min) {
+        } else if (pos <= max - 25 && pos >= min) {
           selectors.id.css(
             "background-image",
             "url(" +
@@ -248,3 +248,36 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidethem');
 hiddenElements.forEach((el) => observer.observe(el));
 
+
+// Header 
+
+
+window.addEventListener("scroll", function(){
+  var header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+})
+
+
+
+// Smooth Scrolling JS
+/*
+const body = document.body,
+  scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+  height = scrollWrap.getBoundingClientRect().height - 1,
+  speed = 0.04;
+
+var offset = 0;
+
+body.style.height = Math.floor(height) + "px";
+
+function smoothScroll() {
+  offset += (window.pageYOffset - offset) * speed;
+
+  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+  scrollWrap.style.transform = scroll;
+
+  callScroll = requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
+*/
