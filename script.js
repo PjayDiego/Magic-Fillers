@@ -86,7 +86,7 @@ const textValues = [
   {
     element: document.getElementById("nava3"),
     englishHTML: "Sobre",
-    spanishHTML: "About",
+    spanishHTML: "Service",
   },
   {
     element: document.getElementById("nava4"),
@@ -159,7 +159,7 @@ window.onload = function () {
 };
 
 // 4. Timeline JS
-
+/*
 (function ($) {
   $.fn.timeline = function () {
     var selectors = {
@@ -201,7 +201,7 @@ window.onload = function () {
   };
 })(jQuery);
 
-$("#timeline-1").timeline();
+$("#timeline-1").timeline();*/
 
 // 5. Scroll on animation JS
 
@@ -224,4 +224,50 @@ hiddenElements.forEach((el) => observer.observe(el));
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 10);
+});
+
+
+ 
+
+
+
+
+/*
+
+document.addEventListener("DOMContentLoaded", function() {
+  const headerLinks = document.querySelectorAll("header a");
+
+  headerLinks.forEach(link => {
+      link.addEventListener("click", function(event) {
+          event.preventDefault(); // Prevent default link behavior
+
+          const targetId = this.getAttribute("href"); 
+          const targetSection = document.querySelector(targetId); 
+
+          if (targetSection) {
+              // Scroll to the target section with smooth behavior
+              targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+      });
+  });
+});
+
+*/
+
+  
+document.addEventListener("DOMContentLoaded", function() {
+  const button = document.getElementById("section1button");
+
+  button.addEventListener("click", function() {
+      const section = document.getElementById("More");
+      if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+      }
+  });
+});
+
+
+document.getElementById('sscrollBuutton').addEventListener('click', function() {
+    var targetSection = document.getElementById('ttargetSeection');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
 });
