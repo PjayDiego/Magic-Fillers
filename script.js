@@ -1,17 +1,3 @@
-/* 1. SMOOTH SCROLLING INTEGRATION */
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 /* 2. background */
 
 //  const interBubble = document.querySelector('.interactive');
@@ -226,12 +212,6 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 10);
 });
 
-
- 
-
-
-
-
 /*
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -254,20 +234,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 */
 
-  
-document.addEventListener("DOMContentLoaded", function() {
-  const button = document.getElementById("section1button");
+/*
 
-  button.addEventListener("click", function() {
-      const section = document.getElementById("More");
-      if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-      }
-  });
+
+document.querySelector('.scrollButton').addEventListener('click', function() {
+  var targetSection = document.querySelector('.targetSection');
+  targetSection.scrollIntoView({ behavior: 'smooth' });
 });
+*/
 
+function smoothScroll(targetId) {
+  var target = document.getElementById(targetId);
+  target.scrollIntoView({ behavior: "smooth" });
+}
 
-document.getElementById('sscrollBuutton').addEventListener('click', function() {
-    var targetSection = document.getElementById('ttargetSeection');
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+/* MENUUUUUUUUUUUUUUUUUUUUUUUUUUUU */
+const phoneMenu = document.querySelector(".burger");
+
+phoneMenu.addEventListener("click", () => {
+  if (document.body.classList.contains("menu-active")) {
+    document.body.classList.remove("menu-active");
+  } else {
+    document.body.classList.add("menu-active");
+  }
 });
