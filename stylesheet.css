@@ -249,7 +249,7 @@ header {
 .ctaWrapper {
   width: 38%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 header nav a:hover,
 header nav:active {
@@ -774,6 +774,12 @@ hr {
   }
   .text-anim-header {
     padding-top: 200px !important;
+  }
+  header {
+    padding: 2.2rem 2rem;
+  }
+  #header.sticky {
+    padding: 1rem 2rem;
   }
 }
 
