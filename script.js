@@ -1,64 +1,4 @@
-/* 2. background */
-
-//  const interBubble = document.querySelector('.interactive');
-//  let curX = 0;
-//  let curY = 0;
-//  let tgX = 0;
-//  let tgY = 0;
-
-//  function move() {
-//      curX += (tgX - curX) / 20;
-//      curY += (tgY - curY) / 20;
-//      interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-//      requestAnimationFrame(() => {
-//          move();
-//      });
-//  }
-
-//  window.addEventListener('mousemove', (event) => {
-//      tgX = event.clientX;
-//      tgY = event.clientY;
-//  });
-
-//  move();
-
-/*  document.addEventListener("DOMContentLoaded", function() {
-      // Get all the <a> elements in the navigation
-      const navLinks = document.querySelectorAll("nav a");
-  
-      // Add click event listeners to each navigation link
-      navLinks.forEach(function(navLink) {
-          navLink.addEventListener("click", function(event) {
-              event.preventDefault();
-              const targetId = this.getAttribute("href"); // Get the href attribute of the clicked link
-              const targetSection = document.querySelector(targetId); // Get the section with the corresponding ID
-              targetSection.scrollIntoView({ behavior: "smooth" });   // Scroll to the target section smoothly
-          });
-      });
-  
-      // Add scroll event listener to highlight the active navigation link
-      window.addEventListener("scroll", function() {
-          const fromTop = window.scrollY;
-          navLinks.forEach(function(navLink) {
-              const section = document.querySelector(navLink.getAttribute("href"));
-              if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-                  navLink.classList.add("active");
-              } else {
-                  navLink.classList.remove("active");
-              }
-          });
-      });
-  });*/
-
-/* 3. TRANSLATION */
 const textValues = [
-  {
-    element: document.getElementById("section1h1"),
-    englishHTML:
-      "<i>Mejorar</i> tus características.<br><i>Restaurar</i> tu confianza.",
-    spanishHTML:
-      "<i>Enhance</i> your features.<br><i>Restore</i> your confidence.",
-  },
   {
     element: document.getElementById("nava1"),
     englishHTML: "Inicio",
@@ -82,9 +22,9 @@ const textValues = [
   {
     element: document.getElementById("section1p"),
     englishHTML:
-      "Especialista en belleza personalizada, certificada en inyectores faciales, <br> con sede en España...",
+      "Especialista en belleza personalizada, certificada en inyectores faciales, con sede en España...",
     spanishHTML:
-      "Personallized in beauty specialty, certified in facial injectors, <br> based in spain...",
+      "Personallized in beauty specialty, certified in facial injectors, based in spain...",
   },
   {
     element: document.getElementById("section1button"),
@@ -94,35 +34,180 @@ const textValues = [
   {
     element: document.getElementById("section2h1"),
     englishHTML: "Descubrir Más",
-    spanishHTML: "Discover more",
+    spanishHTML: "Discover More",
   },
-  // Add other elements as needed
+  {
+    element: document.getElementById("hohop1"),
+    englishHTML:
+      "-Realza tu belleza natural y consigue un aspecto joven y radiante con los tratamientos estéticos faciales elaborados por expertos. Ubicados en España y especializados en el arte de la estética facial, ofrecemos una gama de tratamientos de relleno cuidadosamente seleccionados y adaptados a tus necesidades únicas.",
+    spanishHTML:
+      "-Enhance your natural beauty and achieve a youthful, radiant with the experty crafted facial aesthetics treatments. Located in Spain and specialized in the art of facial aesthetics, offering a range of carefully curated filler treatments tailored to your unique needs.",
+  },
+  {
+    element: document.getElementById("hohop2"),
+    englishHTML:
+      "-Restaura el volumen, suaviza las líneas y revitaliza tu piel con resultados de apariencia natural. Utilizamos técnicas avanzadas y rellenos de primera calidad para esculpir y contornear tus rasgos. Ya sea que busques rejuvenecer tu cutis, definir tus pómulos o realzar tus labios, nuestros expertos en belleza están aquí para ayudarte a lograr el aspecto deseado con precisión y cuidado.",
+    spanishHTML:
+      "-Restore volume, smoothe those lines, and revitalize your skin with natural-looking results.  Utilizing advanced techniques and premiun quality filler to sculpt and contour your features. Whether You're looking to rejuvenate your complexion, define your cheekbones, or enhance your lips, our beauty experts are here to aid you achieve your desired look with precision and care.",
+  },
+  {
+    element: document.getElementById("section1b1"),
+    englishHTML: "Leer Más",
+    spanishHTML: "Read More",
+  },
+  {
+    element: document.getElementById("section2b2"),
+    englishHTML: "Nuestro Servicio",
+    spanishHTML: "Our Service",
+  },
+  {
+    element: document.getElementById("section2side1"),
+    englishHTML: "<i>Mejorar</i>",
+    spanishHTML: "<i>Enhance</i>",
+  },
+  {
+    element: document.getElementById("section2side2"),
+    englishHTML: "<i>restaurar</i>",
+    spanishHTML: "<i>Restore</i>",
+  },
+  {
+    element: document.getElementById("idk1"),
+    englishHTML: "Resultados Duraderos",
+    spanishHTML: "Lasting Results",
+  },
+  {
+    element: document.getElementById("section4h2"),
+    englishHTML: "nuestro Servicio",
+    spanishHTML: "Our Service",
+  },
+  {
+    element: document.getElementById("idk3"),
+    englishHTML: "Consulta Gratis",
+    spanishHTML: "Free Consultation",
+  },
+  {
+    element: document.getElementById("idk2"),
+    englishHTML: "Calidad Premium",
+    spanishHTML: "Premium Quality",
+  },
+  {
+    element: document.getElementById("span1"),
+    englishHTML: "Aumento del mentón",
+    spanishHTML: "Chin Enhancment",
+  },
+  {
+    element: document.getElementById("span2"),
+    englishHTML: "Remodelación de nariz",
+    spanishHTML: "Nose Remodelation",
+  },
+  {
+    element: document.getElementById("span3"),
+    englishHTML: "Esculpir la línea de la mandíbula",
+    spanishHTML: "Jawline Sculpting",
+  },
+  {
+    element: document.getElementById("span4"),
+    englishHTML: "Desgarro a través",
+    spanishHTML: "Tear-Through",
+  },
+  {
+    element: document.getElementById("span5"),
+    englishHTML: "Alineación facial",
+    spanishHTML: "Facial Aligntment",
+  },
+  {
+    element: document.getElementById("span6"),
+    englishHTML: "Aumento de labios",
+    spanishHTML: "Lips Augmentation",
+  },
+  {
+    element: document.getElementById("p1"),
+    englishHTML:
+      "El mentón suele subestimarse. Puede hacernos parecer más exitosos, seguros, masculinos o femeninos. Resalta nuestros mejores rasgos y completa la armonía y simetría facial.",
+    spanishHTML:
+      "The chin is often underestimated. It can make us look more successful, confident, masculine or feminine. It extensaccintuacis our best features, and completes facial harmony and symmetry.",
+  },
+  {
+    element: document.getElementById("p2"),
+    englishHTML:
+      "Corrija las imperfecciones nasales y eleve la punta de la nariz con nuestro tratamiento rápido para obtener resultados duraderos sin tiempo de recuperación.",
+    spanishHTML:
+      "Correct nasal imperfections and add nose tip-lift with our quick treatment for a long lasting results with no downtime.",
+  },
+  {
+    element: document.getElementById("p3"),
+    englishHTML:
+      "Obtenga un rostro perfecto y listo para fotografiar con nuestras técnicas avanzadas para esculpir la mandíbula, levantar los pómulos y aumentar el mentón.",
+    spanishHTML:
+      "Get the picture-ready perfect face with our advanced techniques for jawline sculpting, cheekbone lifting, and chin augmentation.",
+  },
+  {
+    element: document.getElementById("p4"),
+    englishHTML:
+      "Utilizamos la mejor combinación de ácido hialurónico + vitaminas + aminoácidos para rejuvenecer la piel debajo de los ojos, eliminar la mirada cansada y lograr un rostro fresco y de aspecto más joven.",
+    spanishHTML:
+      "We use the best combination of hyaluronic acid+vitamins+amino acids to rejuvenate the under eye skin, eliminate tired-looking eyes, for a fresh and younger looking face.",
+  },
+  {
+    element: document.getElementById("p5"),
+    englishHTML:
+      "Alinee sus proporciones faciales y agregue más feminidad o masculinidad a su rostro disminuyendo o aumentando el ancho de la línea de la mandíbula en proporción a los pómulos.",
+    spanishHTML:
+      "Align your facial proportions and add more femininity or masculinity to your face by decreasing or increasing the width of the jawline proportionate to the cheekbones’.",
+  },
+  {
+    element: document.getElementById("p6"),
+    englishHTML:
+      "Nuestros labios carnosos de aspecto natural respetan la simetría natural de los labios, lo que le dará el volumen deseado a los labios sin un aspecto falso exagerado.",
+    spanishHTML:
+      "Our natural looking full lips respect natural lip symmetry that will give you the desired plump to the lips without the exaggerated fake look.",
+  },
+  {
+    element: document.getElementById("pp"),
+    englishHTML:
+      "La privacidad de los pacientes está garantizada según sus preferencias. Todos los derechos reservados.",
+    spanishHTML:
+      "Patients privacy are ensured to their preference. All rights reserved.",
+  },
+  {
+    element: document.getElementById("us"),
+    englishHTML: "Contacta con nosotras",
+    spanishHTML: "Contact Us",
+  },
+  {
+    element: document.getElementById("copyr"),
+    englishHTML: "&copy; 2024 DK. Liquid Beauty. Reservados todos los derechos",
+    spanishHTML: "&copy; 2024 DK. Liquid Beauty. All rights reserved",
+  },
 ];
 
-const elEng = document.getElementById("englishBtn");
-const elSpn = document.getElementById("spanishBtn");
+const elEng = document.querySelectorAll(".englishBtn");
+const elSpn = document.querySelectorAll(".spanishBtn");
 
-elEng.addEventListener("click", () => {
-  changeLanguage("spanish");
-});
-elSpn.addEventListener("click", () => {
-  changeLanguage("english");
-});
+elEng.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    changeLanguage("spanish");
+  })
+);
+elSpn.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    changeLanguage("english");
+  })
+);
 function changeLanguage(language) {
   textValues.forEach((item) => {
     if (item.element && language === "spanish") {
       item.element.innerHTML = item.spanishHTML;
-      console.log(elEng.classList.contains("active"));
     } else if (item.element && language === "english") {
       item.element.innerHTML = item.englishHTML;
     }
   });
   if (language === "spanish") {
-    elSpn.classList.remove("active");
-    elEng.classList.add("active");
+    elSpn.forEach((el) => el.classList.remove("active"));
+    elEng.forEach((el) => el.classList.add("active"));
   } else {
-    elSpn.classList.add("active");
-    elEng.classList.remove("active");
+    elSpn.forEach((el) => el.classList.add("active"));
+    elEng.forEach((el) => el.classList.remove("active"));
   }
 
   document.getElementById("siteWrapper").style.display = "none";
@@ -144,56 +229,10 @@ window.onload = function () {
   }
 };
 
-// 4. Timeline JS
-/*
-(function ($) {
-  $.fn.timeline = function () {
-    var selectors = {
-      id: $(this),
-      item: $(this).find(".timeline-item"),
-      activeClass: "timeline-item--active",
-      img: ".nava1",
-    };
-    selectors.item.eq(0).addClass(selectors.activeClass);
-    selectors.id.css(
-      "background-image",
-      "url(" + selectors.item.first().find(selectors.img).attr("src") + ")"
-    );
-    var itemLength = selectors.item.length;
-    $(window).scroll(function () {
-      var max, min;
-      var pos = $(this).scrollTop();
-      selectors.item.each(function (i) {
-        min = $(this).offset().top;
-        max = $(this).height() + $(this).offset().top;
-        var that = $(this);
-        if (i == itemLength - 2 && pos > min + $(this).height() / 20) {
-          selectors.item.removeClass(selectors.activeClass);
-          selectors.id.css(
-            "background-image",
-            "url(" + selectors.item.last().find(selectors.img).attr("src") + ")"
-          );
-          selectors.item.last().addClass(selectors.activeClass);
-        } else if (pos <= max - 25 && pos >= min) {
-          selectors.id.css(
-            "background-image",
-            "url(" + $(this).find(selectors.img).attr("src") + ")"
-          );
-          selectors.item.removeClass(selectors.activeClass);
-          $(this).addClass(selectors.activeClass);
-        }
-      });
-    });
-  };
-})(jQuery);
-
-$("#timeline-1").timeline();*/
-
 // 5. Scroll on animation JS
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     } else {
@@ -212,43 +251,13 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 10);
 });
 
-/*
-
-document.addEventListener("DOMContentLoaded", function() {
-  const headerLinks = document.querySelectorAll("header a");
-
-  headerLinks.forEach(link => {
-      link.addEventListener("click", function(event) {
-          event.preventDefault(); // Prevent default link behavior
-
-          const targetId = this.getAttribute("href"); 
-          const targetSection = document.querySelector(targetId); 
-
-          if (targetSection) {
-              // Scroll to the target section with smooth behavior
-              targetSection.scrollIntoView({ behavior: "smooth" });
-          }
-      });
-  });
-});
-
-*/
-
-/*
-
-
-document.querySelector('.scrollButton').addEventListener('click', function() {
-  var targetSection = document.querySelector('.targetSection');
-  targetSection.scrollIntoView({ behavior: 'smooth' });
-});
-*/
-
 function smoothScroll(targetId) {
   var target = document.getElementById(targetId);
   target.scrollIntoView({ behavior: "smooth" });
 }
 
 /* MENUUUUUUUUUUUUUUUUUUUUUUUUUUUU */
+
 const phoneMenu = document.querySelector(".burger");
 
 phoneMenu.addEventListener("click", () => {

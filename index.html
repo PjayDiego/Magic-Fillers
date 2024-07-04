@@ -3,19 +3,377 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic Fillers</title>
+    <meta name="description" content="DK.LIQUID BEAUTY, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Doua">
+    <meta property="og:title" content="DK. LIQUID BEAUTY">
+    <meta property="og:description" content="DK.LIQUID BEAUTY, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
+    <title>DK. LIQUID BEAUTY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"></noscript>
     <link rel="stylesheet" href="stylesheet.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"/>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" async></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" async></script>
+    <script defer>
+       /* 1. SMOOTH SCROLLING INTEGRATION */
+      //  const lenis = new Lenis();
+
+      //  lenis.on("scroll", (e) => {
+      //    console.log(e);
+      //  });
+
+      //  function raf(time) {
+      //    lenis.raf(time);
+      //    requestAnimationFrame(raf);
+      //  }
+
+      //  requestAnimationFrame(raf);
+
+    </script>
+    <script src="script.js" defer></script>
+    <style rel="preload">
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* GLOBALS */
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+#siteWrapper {
+  overflow-x: clip;
+  display: block;
+}
+:root {
+  --text-color: white /*#e8f6f9*/;
+  --red-color: #724151;
+  background-color: #000000;
+}
+html {
+  font-size: 55.5%;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+.home {
+  position: relative;
+  overflow: hidden;
+
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 35vh;
+}
+.pc-nav {
+  display: contents;
+}
+.phone-nav {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .pc-nav {
+    display: none;
+  }
+  .phone-nav {
+    display: contents;
+  }
+
+  /* burger */
+  .phone-nav .burger {
+    all: unset;
+  }
+  .menu-icon {
+    place-self: center;
+    padding-top: 6px;
+    height: 30px;
+    width: 30px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .containerS2 {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0px;
+    text-align: left;
+  }
+  .center-image img {
+    width: 55vw !important;
+  }
+
+  .phoneWrapper {
+    background: white;
+    color: black !important;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all ease 0.3s;
+
+    transform: translateX(-100%);
+    display: flex;
+    justify-content: center;
+  }
+
+  .phoneWrapper .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .phoneWrapper .nava {
+    color: #000;
+    margin: 0;
+    font-size: 32px;
+    padding-block: 12px;
+  }
+  body.menu-active .phoneWrapper {
+    transform: translateX(0%);
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  padding: 2.2rem 5rem;
+  transition: all ease-in-out 300ms;
+  font-size: 2.1rem;
+  animation: loadAnimation 1s ease;
+  border-color: white;
+}
+#header.sticky {
+  padding: 1rem 4rem;
+  background: var(--text-color);
+
+  border-bottom: solid transparent 1.9px var(--red-color);
+  box-shadow: 0px 5px 5px -5px #00000026;
+}
+.sticky .nava {
+  color: var(--red-color);
+  transition: 0.1s;
+  margin-left: 7px;
+}
+.visit {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  padding-block: 1.25px;
+  margin-inline: 5rem;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.visit img {
+  width: 25px;
+}
+.visit {
+  color: var(--red-color);
+    background-color: white;
+    border: 1.5px solid var(--red-color);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10.5px 15px;
+    width: auto;
+    max-width: 450px;
+    transition: 0.1s;
+}
+
+.visit:hover,
+.visit.active{
+  background-color: var(--red-color);
+  color: white;
+}
+
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+}
+.nava {
+  text-decoration: none;
+  color: var(--red-color);
+  margin-left: 0.5rem;
+  margin-right: 6.5rem;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  font-weight: 600;
+  position: relative;
+}
+.nava::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: var(--red-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+.nava:hover::after {
+  width: 100%;
+}
+#copyr {
+  color: black;
+}
+.nava:active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: var(--red-color);
+  position: absolute;
+  left: 0;
+}
+.ctaWrapper {
+  width: 38%;
+  display: flex;
+  justify-content: space-around;
+}
+header nav a:hover,
+header nav:active {
+  color: var(--red-color);
+
+  bottom: -1px;
+}
+.logo {
+  text-shadow: 1px 1px 5px #898989;
+}
+.napsP {
+  opacity: 1;
+  flex: 1;
+  text-align: center;
+}
+
+
+.btn {
+  color: var(--red-color);
+  padding: 3px 35px;
+  border: white;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  animation: loadAnimation 1s ease forwards 0.8s;
+  transition: 1s;
+  letter-spacing: 2px;
+ 
+ 
+  opacity: 1;
+}
+
+
+a .btn {
+  opacity: 1;
+}
+
+
+  
+.btn::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: var(--red-color);
+  position: absolute;
+  left: 21px;
+  bottom: -5px;
+  transition: 0.5s;
+  opacity: 1;
+}
+.btn:hover::after {
+  width: 75%;
+  opacity: 1;
+}
+.btn:active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: var(--red-color);
+  position: absolute;
+  left: -5px;
+  opacity: 1;
+}
+@keyframes loadAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loadAnimation_imgWrapper {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalClinic",
+        "name": "DK.Liquid Beauty",
+        "description": "DK.LIQUID BEAUTY, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty, based in Spain...",
+        "address": {
+          "@type": "29660",
+          "addressLocality": "Marbella",
+          "addressRegion": "Malaga, Andalusia",
+          "postalCode": "29660",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34-654-77-44-23",
+        "url": "https://DK.LiquidBeauty.com",
+        "logo": "https://DK.LiquidBeauty/logo.jpg",
+        "image": "https://DK.LiquidBeauty/clinic-image.jpg",
+        "sameAs": [
+          "https://www.facebook.com/yourclinic",
+          "https://www.instagram.com/dk.liquidbeauty",
+        ],
+        "openingHours": [
+          "Mo-Fr Appointment only",
+          "Sa-Su Closed"
+        ],
+        "priceRange": "Varies on filler/botox quality, amount, and injecting area"
+      }
+      </script>
+      
+
   </head>
   <body>
     <div id="siteWrapper">
@@ -24,7 +382,7 @@
           <div class="phoneWrapper">
             <nav class="navigation">
               <a href="#Hero" id="nava1" class="nava smooth-scroll">Home</a>
-              <a href="#More" id="nava2" class="nava smooth-scroll">More</a>
+              <a href="#More" id="nava2" class="nava smooth-scroll">About</a>
               <a href="#Service" id="nava3" class="nava smooth-scroll">Service</a>
               <a href="#Contact" id="nava4" class="nava smooth-scroll">Contact</a
               >
@@ -39,26 +397,28 @@
           </button>
           <div class="logo"><h1>Logo</h1></div>
           <div class="ctaWrapper">
-            <button id="englishBtn" class="visitbtn active">
-              <a href="#" class="visit" style="margin-inline: 1em"
+            <button id="" class="visitbtn active englishBtn">
+              <a href="#Hero" class="visit" style="margin-inline: 1em"
                 ><img src="images/uk.svg" alt="united kingdom flag"
               /></a>
             </button>
-            <button id="spanishBtn" class="visitbtn">
-              <a href="#" class="visit" style="margin-inline: 1em"
+            <button id="" class="visitbtn spanishBtn">
+              <a href="#Hero" class="visit" style="margin-inline: 1em"
                 ><img src="images/es.svg" alt="spain flag"
               /></a>
             </button>
           </div>
+        
+
         </section>
         <section class="pc-nav">
           <div class="navWrapper">
             <nav class="navigation">
               <a href="#Hero" id="nava1" class="nava smooth-scroll">Home</a>
-              <a href="#More" id="nava2" class="nava smooth-scroll">More</a>
+              <a href="#More" id="nava2" class="nava smooth-scroll">About</a>
               <a
                 href="#Service"
-                onclick="smoothScroll('More')"
+                
                 id="nava3"
                 class="nava smooth-scroll"
                 >Service</a
@@ -72,70 +432,93 @@
           <div class="logo"><h1>O</h1></div>
           <div class="ctaWrapper">
 
-            <button id="englishBtn" class="visitbtn active">
-              <a href="#" class="visit" style="margin-inline: 1em"
+            
+            <button id="" class="visitbtn active englishBtn">
+              <a href="#Hero" class="visit" style="margin-inline: 1em"
                 ><img src="images/uk.svg" alt="united kingdom flag"
               /></a>
             </button>
-            <button id="spanishBtn" class="visitbtn">
-              <a href="#" class="visit" style="margin-inline: 1em"
+            <button id="" class="visitbtn spanishBtn">
+              <a href="#Hero" class="visit" style="margin-inline: 1em"
                 ><img src="images/es.svg" alt="spain flag"
               /></a>
             </button>
-              <button class="visitbtn scrollButton" type="button" id="vbtn">
-              <a href="#Contact" class="visit">Schedule Your Appointment</a>
-            </button>
+             
+              <a href="#Contact" id="vbtn" class="visit">Schedule Your Appointment</a>
+            
           </div>
         </section>
       </header>
 
+      <main>
 
+      <article>
+
+      <div class="text-anim-content"  id="Hero">
+        <div class="text-anim-header">
+          <h1>
+            DK.<br />Liquid <br /> Beauty
+            
+          </h1>
+        </div>     
+      </div>
+       
+     
+
+      <section class="home">
         
-        <div class="text-anim-content">
-          <div class="text-anim-header">
-            <h1>
-              DK.<br />Aesthetics<br /> Clinic
-              
-            </h1>
-          </div>     
-        </div>
-        <section class="home" style="display: gnone;" id="Hero">
-        <div class="text-box">
-          <div class="curvy-text">
-            <svg viewBox="0 0 250 90">
-              <path id="curve" fill="none" d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"/>
-              <text>
-                <textPath href="#curve" startOffset="-10%">
-                  Enhance your features - Restore your confidence
-                </textPath>
-                     <textPath href="#curve" startOffset="37%">
-                  Enhance your features - Restore your confidence
-                </textPath>
-                         <textPath href="#curve" startOffset="85%">
-                  Enhance your features - Restore your confidence
-                </textPath>
-              </text>
-            </svg>
-          </div>
-          <div style="color: black;
-    font-size: 18px;"><p>Personalized beauty speacialty, certified in facial injectors, <br>based in spain...</p></div>
-<!-- 
-          <div class="napsP"><p>Personalized beauty speacialty, certified in facial injectors, <br>based in spain...</p></div>
-          <div class="napsbtn"><button class="btn"><a>Read More</a></button><button class="btn"><a>Our Service</a></button></div> -->
-        </div>
-      </section>
+      <div class="btns-container">
+  
+      <div class="btnn1">
+        <a href="#More"><button class="btn" id="section1b1">Read More</button></a>
+      </div>
+      <div class="napsP">
+        <p id="section1p">Personalized beauty speacialty, certified in facial injectors, based in spain...</p>
+      </div>
+        
+        <div class="btnn2">  
+          <a href="#Service"><button class="btn" id="section2b2">Our Service</button></a>
+        </div> 
+      </div>
+
+
+         
+      </section> 
+
+
+
+
+    </article>
+   
 
       <section class="section2ID" id="More">
+        <div class="curvy-text">
+          <svg viewBox="0 0 250 90">
+            <path id="curve" fill="none" d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"/>
+            <text>
+              <textPath href="#curve" startOffset="-10%">
+                Enhance your features - Restore your confidence
+              </textPath>
+                    <textPath href="#curve" startOffset="37%">
+                Enhance your features - Restore your confidence
+              </textPath>
+                        <textPath href="#curve" startOffset="85%">
+                Enhance your features - Restore your confidence
+              </textPath>
+            </text>
+          </svg>
+        </div>
+
         <div class="section2Header">
-          <p>Magic Fillers</p>
+          <h2 id="hct">DK. Liquid Beauty</h2>
           <div>
-            <h1 class="hidethem headerbg1" id="section2h1">Discover More</h1>
+            <h2 class="hidethem headerbg1" id="section2h1">Discover More</h2>
           </div>
         </div>
         <div class="containerS2">
           <div class="text-right hidethem hoho">
-            <p>
-              Enhance your natural beauty and achieve a youthful, radiant with
+            <p id="hohop1">
+              -Enhance your natural beauty and achieve a youthful, radiant with
               the experty crafted facial aesthetics treatments. Located in Spain
               and specialized in the art of facial aesthetics, offering a range
               of carefully curated filler treatments tailored to your unique
@@ -144,21 +527,22 @@
           </div>
           <div style="display: flex; margin-top: 100px">
             <div style="display: flex; align-items: center">
-              <span class="hidethem enhancespn"><i>Enhance</i></span>
+              <span class="hidethem enhancespn" id="section2side"><i>Enhance</i></span>
             </div>
             <div class="center-image">
-              <img src="images/hero-image.jpg" />
+              <img src="images/smilling-women.jpg" loading="lazy" alt="Smillimg women" />
             </div>
             <div style="display: flex; align-items: center">
-              <span class="hidethem restorespn"><i>Restore</i></span>
+              <span class="hidethem restorespn" id="section2side2"><i>Restore</i></span>
             </div>
           </div>
 
           <div class="text-left hoho">
-            <p>
+            <p id="hohop2">
+              -Restore volume, smoothe those lines, and
+              revitalize your skin with natural-looking results. 
               Utilizing advanced techniques and premiun quality filler to sculpt
-              and contour your features, restoring volumes, smoothing lines, and
-              revitalizing your skin with natural-looking results. Whether
+              and contour your features. Whether
               You're looking to rejuvenate your complexion, define your
               cheekbones, or enhance your lips, our beauty experts are here to
               aid you achieve your desired look with precision and care.
@@ -168,29 +552,29 @@
           
           </div>
         </div>
-        <a class="scroll-downs hoverable" aria-label="Scroll down more"
+        <a href="#Service" class="scroll-downs hoverable" aria-label="Check further down our services"
           ><div class="mousey"><div class="scroller"></div></div
         ></a>
       </section>
 
       <section id="section33" class="section3ID">
         <div class="section3Header">
-          <p>Magic Fillers</p>
+          <h3>DK. Liquid Beauty</h3>
         </div>
 
         <div class="lineBox jojos">
           <div>
             <i
-              class="fa-solid fa-calendar-check icon3class"
+              class="fa-solid fa-calendar-check icon3class hidethem hoho"
               style="color: white"
             ></i>
             <hr />
-            <span>Lasting Results</span>
+            <span id="idk1">Lasting Results</span>
           </div>
           <!--<div class="left-line gonn hidethem"></div>-->
           <div>
             <i
-              class="fa-solid fa-hand-holding-heart icon2class"
+              class="fa-solid fa-hand-holding-heart icon2class hidethem hoho"
               style="color: white"
             ></i>
             <hr />
@@ -199,7 +583,7 @@
           <!--<div class="right-line gonn hidethem"></div>-->
           <div>
             <i
-              class="fa-solid fa-user-doctor icon1class"
+              class="fa-solid fa-user-doctor icon1class hidethem hoho"
               style="color: white"
             ></i>
             <hr />
@@ -210,81 +594,88 @@
 
       <section class="section4ID" id="Service">
         <div class="section4Header">
-          <p>Magic Fillers</p>
-          <div><h1 class="hidethem">Our Service</h1></div>
+          <h3>DK. Liquid Beauty</h3>
+          <div><h2 class="hidethem" id="section4h2">Our Service</h2></div>
         </div>
 
+        <div class="text-box baka">
+
+
+
         <div class="service-box">
-          <div class="single-service">
-            <img src="images/img_1.jpg" alt="" />
+           
+          <div class="single-service hidethem">
+            <img src="images/chin-enhancment-service.jpg" loading="lazy" alt="Chin enhancment service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Chin Enhancment</span>
+              <span id="span1">Chin Enhancment</span>
               <hr />
-              <p>
+              <p id="p1">
                 The chin is often underestimated. It can make us look more
                 succesful, confident, mascilune or femenin. It extensaccintuacis
                 our best features, and completes facial harmony and symmetry.
               </p>
             </div>
-          </div>
-          <div class="single-service">
-            <img src="images/img_2.jpg" alt="" />
+          
+        </div>
+          <div class="single-service hidethem">
+            <img src="images/nose-remodelation-service.jpg" loading="lazy" alt="Nose remodelation service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Nose Remodelation</span>
+              <span id="span2">Nose Remodelation</span>
               <hr />
-              <p>
+              <p id="p2">
                 Correct nasal imperfections and add nose tip-lift with our quick
                 treatment for a long lasting results with no downtime.
               </p>
             </div>
           </div>
-          <div class="single-service">
-            <img src="images/img_3.jpg" alt="" />
+        
+          <div class="single-service hidethem">
+            <img src="images/jawline-sculpting-service.jpg" loading="lazy" alt="Jawline sculpting service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Jawline Sculpting</span>
+              <span id="span3">Jawline Sculpting</span>
               <hr />
-              <p>
+              <p id="p3">
                 Get the picture-ready perfect face with our advanced techniques
                 for jawline sculpting, cheekbone lifting, and chin augmenting.
               </p>
             </div>
           </div>
-          <div class="single-service">
-            <img src="images/img_4.jpg" alt="" />
+          <div class="single-service hidethem">
+            <img src="images/tear-through-service.jpg" loading="lazy" alt="Tear through service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Tear-Through</span>
+              <span id="span4">Tear-Through</span>
               <hr />
-              <p>
+              <p id="p4">
                 We use the best combination of hyaluronic acid+vitamins+amino
                 acids to rejuvenate the under eye skin, eliminate tired-looking
                 eyes, for a fresh and younger looking face.
               </p>
             </div>
           </div>
-          <div class="single-service">
-            <img src="images/img_5.jpg" alt="" />
+          <div class="single-service hidethem">
+            <img src="images/facial-aligntment-service.jpg" loading="lazy" alt="Facial aligntment service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Facial Aligntment</span>
+              <span id="span5">Facial Aligntment</span>
               <hr />
-              <p>
+              <p id="p5">
                 Align your facial proportions and add more femininity or
                 masculinity to your face by decreasing or increasing the width
                 of the jawline proportionate to the cheekbones’.
               </p>
             </div>
           </div>
-          <div class="single-service">
-            <img src="images/img_6.jpg" alt="" />
+          <div class="single-service hidethem">
+            <img src="images/lips-augmentation-service.jpg" loading="lazy" alt="lips augmentation service" />
             <div class="overlay"></div>
             <div class="service-desc">
-              <span>Lips Augmentation</span>
+              <span id="span6">Lips Augmentation</span>
               <hr />
-              <p>
+              <p id="p6">
                 Our natural looking full lips respect natural lip symmetry that
                 will give you the desired plump to the lips without the
                 exaggerated fake look.
@@ -293,20 +684,60 @@
           </div>
         </div>
 
-        <div class="downpara"><p>
-          "Fillers are 20% science and 80% art,<br>
-          ensure you choose the right artist"
+        
+
+
+
+
+
+        <div class="downpara"><p id="pp">
+          Patients privacy are ensured to their preference. All rights reserved.
         </p></div>
       </section>
 
       <section class="section5ID targetSection" id="Contact">
         <div class="section5Header">
-          <p>Magic Fillers</p>
-          <div><h1 class="hidethem">Contact Us</h1></div>
+          <h3>DK. Liquid Beauty</h3>
+          <div><h2 class="hidethem" id="us">Contact Us</h2></div>
         </div>
 
-        <div class="text-box6 jojos">
-          <button type="button" class="btn6" id="section6button">
+        <aside class="sidenav">
+          <ul>
+            <li title="Available in...">Madrid</li>
+            <li><span>/</span></li>
+            <li title="Available in...">Marbella</li>
+            <li><span>/</span></li>
+            <li title="Available in...">Barcelona</li>
+          </ul>
+        </aside>
+        
+        <aside class="sidenav-left">
+          <ul>
+            <li>
+              <a title="Check us out on Instagram" href="https://www.facebook.com/Tahssis" target="_blank">
+                <i class="fa-brands fa-instagram side-icons"></i>
+              </a>
+            </li>
+            <li><span class="slash">/</span></li>
+            <li>
+              <a title="Contact us over WhatsApp" href="https://instagram.com/tahssis_" target="_blank">
+                <i class="fa-brands fa-whatsapp side-icons"></i>
+              </a>
+            </li>
+            <li><span class="slash">/</span></li>
+            <li>
+              <a title="Email us over our Gmail" href="https://www.youtube.com/@tahssisassociation/about" target="_blank">
+                <i class="fa-solid fa-envelope side-icons"></i>
+              </a>
+            </li>
+          </ul>
+        </aside>
+        
+
+        <div class="text-box6 jojos" style="flex-direction: column;"> 
+          <p class="apa">We'd love to hear from you. Get in touch with us for any inquiries or appointments.</p>  
+          <a class="box6a" href="https://www.instagram.com/magic_fillers?igsh=bXdwZ2RpM2VwNzE5" target="_blank" title="Get In Touch over Intagram">
+            <button type="button" class="btn6" id="section6button">
             <span class="gonn hidethem">G</span
             ><span class="gonn hidethem">e</span
             ><span class="gonn hidethem">t</span
@@ -318,25 +749,10 @@
             ><span class="gonn hidethem">u</span
             ><span class="gonn hidethem">c</span
             ><span class="gonn hidethem">h</span>
-          </button>
+          </button></a>
         </div>
 
-   <!--     <div class="footer-row">
-          <div class="footer-left">
-            <span>Avaibilities</span>
-            <p><i class="fa fa-solid fa-location-dot"></i>Madrid</p>
-            <p><i class="fa fa-solid fa-location-dot"></i>Barcellona</p>
-            <p><i class="fa fa-solid fa-location-dot"></i>Marbeilla</p>
-          </div>
-          <div class="footer-right">
-            <span>Social Media</span>
-            <p>test@gmail.com<i class="fa fa-solid fa-envelope"></i></p>
-            <p>+212 064 04 951<i class="fa fa-phone"></i></p>
-            <p>Test-derma<i class="fa fa-brands fa-instagram"></i></p>
-          </div>
-        </div>
-      </section>
-    </div> -->
+   
 
     <!--Background gradient HTML-->
     <div class="gradient-bg" id="svgBackground">
@@ -368,36 +784,27 @@
       </div>
     </div>
 
-    <!-- 
-  <p> Enhance your natural beauty and achieve a youthful, radiant appearance with the experty crafted facial aesthetics treatments. Located in Spain and specialized in the art of facial aesthetics, offering a range of carefully curated filler treatments tailored to your unique needs.
-    Utilizing advanced techniques and premiun quality filler to sculpt and contour your features, restoring volumes, smoothing lines, and revitalizing your skin with natural-looking results. Whether You're looking to rejuvenate your complexion, define your cheekbones, or enhance your lips, our beauty experts are here to aid you achieve your desired look with precision and care.
-    <br> <br> Explore our range of transformative treatments designed to rejuvenate, redifine, and reveal the true masterpiece within you. Smoothing away wrinkles, sculpting cheekbones, or enhancing delicate features, our experties is dedicated to creating solutions tailored to your unique needs.</p> -->
+  </section>
+  </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script>
-       /* 1. SMOOTH SCROLLING INTEGRATION */
-      //  const lenis = new Lenis();
 
-      //  lenis.on("scroll", (e) => {
-      //    console.log(e);
-      //  });
 
-      //  function raf(time) {
-      //    lenis.raf(time);
-      //    requestAnimationFrame(raf);
-      //  }
+      
+  
 
-      //  requestAnimationFrame(raf);
 
-    </script>
-    <script src="script.js"></script>
+
+
+
+
   </body>
 </html>
-<!-- 
-class="fa-solid fa-hand-holding-heart fa-flip-horizontal icon2class"
-style="color: white;
-<div class="right-line gonn hidethem"></div>
-lass="fa-solid fa-user-doctor icon1class" style="color: white;"></i>Free Consultation</h1> -->
+
+
+
+
+
+
+
+
+
