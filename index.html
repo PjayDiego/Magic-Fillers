@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DK.LIQUID BEAUTY, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
+    <meta name="description" content="DK.Liquid Beauty, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Doua">
     <meta property="og:title" content="DK. LIQUID BEAUTY">
-    <meta property="og:description" content="DK.LIQUID BEAUTY, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
+    <meta property="og:description" content="DK.Liquid Beauty, your premier destination to Enhance your features, and Restore your confidence. Discover expert care and professional beauty fillers and botox tratments tailored to Enhance and Restore your natural beauty.">
+    
+      
+      <meta property="og:title" content="DK.FLUID BEAUTY">
+      
+      <meta property="og:image" content="images/smilling-women.jpg">
+      <meta property="og:url" content="https://dk.fluidbeauty.com">
+      <meta property="og:type" content="website">
+    
+    
+      
+      
+      
+    
+    
     <title>DK. LIQUID BEAUTY</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,18 +41,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" async></script>
     <script defer>
        /* 1. SMOOTH SCROLLING INTEGRATION */
-      //  const lenis = new Lenis();
+        const lenis = new Lenis();
 
-      //  lenis.on("scroll", (e) => {
-      //    console.log(e);
-      //  });
+       lenis.on("scroll", (e) => {
+        console.log(e);
+        });
 
-      //  function raf(time) {
-      //    lenis.raf(time);
-      //    requestAnimationFrame(raf);
-      //  }
+      function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
 
-      //  requestAnimationFrame(raf);
+        requestAnimationFrame(raf);
 
     </script>
     <script src="script.js" defer></script>
@@ -297,7 +311,207 @@ header nav:active {
 a .btn {
   opacity: 1;
 }
+:root {
+  --color-bg1: #cdafb7;
+  --color-bg2: #bf567d;
+  --color1: 205, 197, 189;
+  --color2: 255, 167, 74;
+  --color3: 255, 234, 100;
+  --color4: 200, 115, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
 
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+.gradient-bg::before {
+  content: "";
+  background-color: #0000001c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+  z-index: -100;
+
+  svg {
+    display: none;
+  }
+
+  .gradients-container {
+    filter: url(#goo) blur(40px);
+    width: 100%;
+    height: 100%;
+  }
+
+  .g1 {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color1), 0.8) 0,
+        rgba(var(--color1), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+
+    opacity: 1;
+  }
+
+  .g2 {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color2), 0.8) 0,
+        rgba(var(--color2), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+
+    opacity: 1;
+  }
+
+  .g3 {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color3), 0.8) 0,
+        rgba(var(--color3), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+
+    transform-origin: calc(50% + 400px);
+    animation: moveInCircle 40s linear infinite;
+
+    opacity: 1;
+  }
+
+  .g4 {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color4), 0.8) 0,
+        rgba(var(--color4), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+
+    opacity: 0.7;
+  }
+
+  .g5 {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color5), 0.8) 0,
+        rgba(var(--color5), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+    animation: moveInCircle 20s ease infinite;
+
+    opacity: 1;
+  }
+
+  .interactive {
+    position: absolute;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color-interactive), 0.8) 0,
+        rgba(var(--color-interactive), 0) 50%
+      )
+      no-repeat;
+    mix-blend-mode: var(--blending);
+
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+
+    opacity: 0.7;
+  }
+}
 
   
 .btn::after {
@@ -362,7 +576,6 @@ a .btn {
         "logo": "https://DK.LiquidBeauty/logo.jpg",
         "image": "https://DK.LiquidBeauty/clinic-image.jpg",
         "sameAs": [
-          "https://www.facebook.com/yourclinic",
           "https://www.instagram.com/dk.liquidbeauty",
         ],
         "openingHours": [
@@ -395,18 +608,18 @@ a .btn {
               <span class="menu-icon__line menu-icon__line-right"></span>
             </div>
           </button>
-          <div class="logo"><h1>Logo</h1></div>
+          <div class="logo"></div>
           <div class="ctaWrapper">
-            <button id="" class="visitbtn active englishBtn">
-              <a href="#Hero" class="visit" style="margin-inline: 0em"
+            
+              <a href="#Hero" class="visit visitbtn englishBtn" style="margin-inline: 2em"
                 ><img src="images/uk.svg" alt="united kingdom flag"
               /></a>
-            </button>
-            <button id="" class="visitbtn spanishBtn">
-              <a href="#Hero" class="visit" style="margin-inline: 0em"
+            
+            
+              <a href="#Hero" class="visit visitbtn spanishBtn"  style="margin-inline: -25px;"
                 ><img src="images/es.svg" alt="spain flag"
               /></a>
-            </button>
+            
           </div>
         
 
@@ -429,7 +642,7 @@ a .btn {
             </nav>
           </div>
 
-          <div class="logo"><h1>O</h1></div>
+          <div class="logo"></div>
           <div class="ctaWrapper">
 
             
@@ -473,7 +686,7 @@ a .btn {
         <a href="#More"><button class="btn" id="section1b1">Read More</button></a>
       </div>
       <div class="napsP">
-        <p id="section1p">Personalized beauty speacialty, certified in facial injectors, based in spain...</p>
+        <p id="section1p">Personalized beauty speacialty,<br> certified in facial injectors, based in spain...</p>
       </div>
         
         <div class="btnn2">  
@@ -527,7 +740,7 @@ a .btn {
           </div>
           <div style="display: flex; margin-top: 100px">
             <div style="display: flex; align-items: center">
-              <span class="hidethem enhancespn" id="section2side"><i>Enhance</i></span>
+              <span class="hidethem enhancespn" id="section2side1"><i>Enhance</i></span>
             </div>
             <div class="center-image">
               <img src="images/smilling-women.jpg" loading="lazy" alt="Smillimg women" />
@@ -578,7 +791,7 @@ a .btn {
               style="color: white"
             ></i>
             <hr />
-            <span>Premiun Quality</span>
+            <span id="idk2">Premiun Quality</span>
           </div>
           <!--<div class="right-line gonn hidethem"></div>-->
           <div>
@@ -587,7 +800,7 @@ a .btn {
               style="color: white"
             ></i>
             <hr />
-            <span>Free Consultation</span>
+            <span id="idk3">Free Consultation</span>
           </div>
         </div>
       </section>
@@ -714,19 +927,19 @@ a .btn {
         <aside class="sidenav-left">
           <ul>
             <li>
-              <a title="Check us out on Instagram" href="https://www.facebook.com/Tahssis" target="_blank">
+              <a title="Check us out on Instagram" href="https://www.instagram.com/dk.liquidbeauty" target="_blank">
                 <i class="fa-brands fa-instagram side-icons"></i>
               </a>
             </li>
             <li><span class="slash">/</span></li>
             <li>
-              <a title="Contact us over WhatsApp" href="https://instagram.com/tahssis_" target="_blank">
+              <a title="Contact us over WhatsApp" href="https://wa.me/+34654774423" target="_blank">
                 <i class="fa-brands fa-whatsapp side-icons"></i>
               </a>
             </li>
             <li><span class="slash">/</span></li>
             <li>
-              <a title="Email us over our Gmail" href="https://www.youtube.com/@tahssisassociation/about" target="_blank">
+              <a title="Email us over our Gmail" href="mailto:example@gmail.com" target="_blank">
                 <i class="fa-solid fa-envelope side-icons"></i>
               </a>
             </li>
@@ -736,7 +949,7 @@ a .btn {
 
         <div class="text-box6 jojos" style="flex-direction: column;"> 
           <p class="apa">We'd love to hear from you. Get in touch with us for any inquiries or appointments.</p>  
-          <a class="box6a" href="https://www.instagram.com/magic_fillers?igsh=bXdwZ2RpM2VwNzE5" target="_blank" title="Get In Touch over Intagram">
+          <a class="box6a" href="https://www.instagram.com/dk.liquidbeauty" target="_blank" title="Get In Touch over Intagram">
             <button type="button" class="btn6" id="section6button">
             <span class="gonn hidethem">G</span
             ><span class="gonn hidethem">e</span

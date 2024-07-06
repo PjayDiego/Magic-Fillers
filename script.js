@@ -22,9 +22,9 @@ const textValues = [
   {
     element: document.getElementById("section1p"),
     englishHTML:
-      "Especialista en belleza personalizada, certificada en inyectores faciales, con sede en España...",
+      "Especialista en belleza personalizada,<br> certificada en inyectores faciales,<br> con sede en España...",
     spanishHTML:
-      "Personallized in beauty specialty, certified in facial injectors, based in spain...",
+      "Personallized in beauty specialty,<br> certified in facial injectors, based in spain...",
   },
   {
     element: document.getElementById("section1button"),
@@ -72,7 +72,7 @@ const textValues = [
   },
   {
     element: document.getElementById("idk1"),
-    englishHTML: "Resultados Duraderos",
+    englishHTML: "Resultados<br> Duraderos",
     spanishHTML: "Lasting Results",
   },
   {
@@ -82,12 +82,12 @@ const textValues = [
   },
   {
     element: document.getElementById("idk3"),
-    englishHTML: "Consulta Gratis",
+    englishHTML: "Consulta<br> Gratis",
     spanishHTML: "Free Consultation",
   },
   {
     element: document.getElementById("idk2"),
-    englishHTML: "Calidad Premium",
+    englishHTML: "Calidad<br> Premium",
     spanishHTML: "Premium Quality",
   },
   {
@@ -267,3 +267,4 @@ phoneMenu.addEventListener("click", () => {
     document.body.classList.add("menu-active");
   }
 });
+
